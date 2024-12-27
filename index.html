@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Website</title>
+    <style>
+       header {
+    background-color: rgba(0, 120, 215, 0.9); /* Slightly darker blue */
+    color: white;
+    padding: 1em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow to make it stand out */
+}
+
+header nav {
+    display: flex;
+    justify-content: center; /* Centering the nav items */
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffcc00; /* Gold underline */
+    transition: width 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffcc00; /* Change text color to gold */
+    transform: scale(1.1); /* Slightly scale up text on hover */
+}
+
+header nav a:hover::after {
+    width: 100%; /* Underline expands on hover */
+}
+
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('https://img.freepik.com/free-vector/abstract-geometric-wireframe-background_52683-59421.jpg?t=st=1735263594~exp=1735267194~hmac=425fa815cdda8dd396866e567d3ab46ec77a8af21279c316dc2a78511a6afa31&w=1060');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: lighten;
+}
+
+.main-block {
+    position: relative;
+    text-align: center;
+    padding: 8em 2em;
+    margin-bottom: 2em;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.main-block img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.main-block .text {
+    font-size: 2.5em;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Removed hover effect for text */
+.main-block .text:hover {
+    /* No glow or scale effect applied */
+}
+
+        .course-detail-block, .details-block, .team-vlog, .sliding-blocks, .quote-thank-you {
+            text-align: center;
+            padding: 2em;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2em;
+            border-radius: 10px;
+        }
+        .course-detail-block h2, .details-block h2, .team-vlog h2, .sliding-blocks h2, .quote-thank-you h2 {
+            color: #00509e;
+            font-size: 1.8em;
+        }
+        .sliding-blocks ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sliding-blocks li {
+            background-color: #0078d7;
+            color: white;
+            padding: 1.5em;
+            margin-bottom: 1em;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .sliding-blocks li:hover {
+            background-color: #00509e;
+        }
+        .quote-thank-you p {
+            font-size: 1.5em;
+            font-style: italic;
+            margin: 1em 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#team">Team Details</a>
+        <a href="#workspace">Work Space</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+
+    <section class="main-block">
+        <img src="https://thumbs.dreamstime.com/b/vivid-background-colors-intermingling-like-dance-abstract-brushstrokes-generative-ai-design-instagram-facebook-wall-325487145.jpg" alt="Algorithm">
+        <div class="text">Design and Analysis of Algorithm</div>
+    </section>
+
+    <section class="course-detail-block">
+        <h2>Course Detail</h2>
+        <p>Discover the intricacies of algorithms, their design principles, and analytical approaches to solve complex problems.</p>
+    </section>
+
+    <section class="details-block">
+        <h2>Details About the Project</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        <p>Additional details can be added here with more elaborate information about the project, including objectives, challenges, and outcomes.</p>
+    </section>
+
+    <section class="team-vlog">
+        <h2>Team Vlog</h2>
+        <p>This section highlights team members' contributions and vlog updates.</p>
+    </section>
+
+    <section class="sliding-blocks">
+        <h2>Explore More</h2>
+        <ul>
+            <li onclick="window.location.href='course-details.html';">1. Course Details</li>
+            <li onclick="window.location.href='course-team.html';">2. Course Team Details</li>
+            <li onclick="window.location.href='learning-reflections.html';">3. Learning Reflections</li>
+            <li onclick="window.location.href='space-time-efficiency.html';">4. Space and Time Efficiency</li>
+            <li onclick="window.location.href='sorting-searching.html';">5. Sort and Searching Algorithm</li>
+            <li onclick="window.location.href='business-cases.html';">6. Business Cases in Real World</li>
+            <li onclick="window.location.href='solutions-dsa.html';">7. Solution of Business Case by DSA</li>
+            <li onclick="window.location.href='sdg-applied.html';">8. SDG Applied</li>
+        </ul>
+    </section>
+
+    <section class="quote-thank-you">
+        <h2>Quote</h2>
+        <p>"The journey of a thousand miles begins with one step." - Lao Tzu</p>
+        <h2>Thank You</h2>
+        <p>Thank you for exploring our project!</p>
+    </section>
+</body>
+</html>
