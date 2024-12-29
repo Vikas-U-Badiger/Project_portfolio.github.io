@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Reflection</title>
+    <style>
+        /* CSS Variables for Colors */
+        :root {
+            --pale-dogwood: #fd5200;
+            --light-coral: #488B49;
+            --misty-rose: #FBFAF8;
+            --celadon: #9ee326;
+            --salmon-pink: #f48498ff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: var(--misty-rose);
+        }
+
+        .question-container {
+            background-color: var(--pale-dogwood);
+            padding: 60px;
+            border: 1px solid var(--light-coral);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .answer-block {
+            background-color: var(--celadon);
+            padding: 30px;
+            border: 1px solid var(--salmon-pink);
+            border-radius: 5px;
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .answer-members {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .block {
+            background-color: var(--light-coral);
+            padding: 20px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .block:hover {
+            background-color: var(--salmon-pink);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Learning Reflections</h1>
+
+    <div class="question-container">
+        <h2>Question Details</h2>
+    </div>
+
+    <div class="answer-block">
+        <p>This is an answer block for detailed information or user responses.</p>
+    </div>
+
+    <div class="answer-members">
+        <a class="block" href="https://example.com/answer1" target="_blank">Member 1</a>
+        <a class="block" href="https://example.com/answer2" target="_blank">Member 2</a>
+        <a class="block" href="https://example.com/answer3" target="_blank">Member 3</a>
+        <a class="block" href="https://example.com/answer4" target="_blank">Member 4</a>
+    </div>
+
+</body>
+</html>
+  
