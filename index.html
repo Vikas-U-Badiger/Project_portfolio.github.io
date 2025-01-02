@@ -247,6 +247,33 @@ header nav a:hover::after {
         .sliding-blocks li.sdg-applied-trigger:hover {
             background-color: rgb(0,0,255);
         }
+        table {
+            width: 80%; /* Adjust as needed */
+            margin: 20px auto; /* Center the table */
+            border-collapse: collapse;
+            font-family: sans-serif;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px; /* Increased padding */
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        code {
+            font-family: monospace;
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
     </style>
     <script>
         function toggleDetails(event) {
@@ -342,7 +369,47 @@ function toggleContent(event) {
             <img src="assets/projectimage.jpg">
         </div>
         <li onclick="window.location.href='business-cases.html';">3. Business Cases in Real World</li>
-        <li onclick="window.location.href='sorting-searching.html';">4.Data Structure And Algorithm</li>
+         <li class="expandable-block" onclick="toggleContent(event)">4. Data Structures and Algorithms Used</li>
+        <div class="expandable-content" style="display: none;">
+            <p>
+                <table>
+  <thead>
+    <tr>
+      <th>Functionality</th>
+      <th>Data Structure(s)</th>
+      <th>Algorithm(s)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Inventory Storage</td>
+      <td><code>std::vector&lt;Bill&gt;</code></td>
+      <td>Merge Sort</td>
+    </tr>
+    <tr>
+      <td>Item Search</td>
+      <td><code>std::string</code> (for search term)</td>
+      <td>KMP Algorithm, Linear Search</td>
+    </tr>
+    <tr>
+      <td>Graph Representation</td>
+      <td><code>std::unordered_map&lt;string, vector&lt;pair&lt;string, int&gt;&gt;&gt;</code></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Shortest Path Calculation</td>
+      <td><code>std::unordered_map</code>, <code>std::priority_queue</code>, <code>std::pair</code></td>
+      <td>Dijkstra's Algorithm</td>
+    </tr>
+    <tr>
+      <td>Number Plate Allocation</td>
+      <td><code>std::unordered_map</code>, <code>std::vector</code></td>
+      <td>Random Number Generation</td>
+    </tr>
+  </tbody>
+</table>
+            </p>
+        </div>
         <li onclick="window.location.href='codeSnippet.html';">5. Solution Program</li>
         <li onclick="window.location.href='space-time-efficiency.html';">6. Space and Time Efficiency</li>
         <li onclick="window.location.href='learning-reflections.html';">7. Learning Reflections</li>
