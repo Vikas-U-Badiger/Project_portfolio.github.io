@@ -245,7 +245,7 @@ header nav a:hover::after {
         }
 
         .sliding-blocks li.sdg-applied-trigger:hover {
-            background-color: #218838;
+            background-color: rgb(0,0,255);
         }
     </style>
     <script>
@@ -269,9 +269,6 @@ function toggleContent(event) {
 <header>
     <nav>
         <a href="index.html">Home</a>
-        <a href="#explore-more">Team Details</a>
-        <a href="workspace.html">Work Space</a>
-        <a href="about.html">About</a>
     </nav>
 </header>
 
@@ -335,25 +332,20 @@ function toggleContent(event) {
 </section>
 
 
-<section class="team-vlog">
-    <h2>Team Vlog</h2>
-    <p>This section highlights team members' contributions and vlog updates.</p>
-</section>
-
 <section class="sliding-blocks" id="explore-more">
     <h2>Explore More</h2>
     <ul>
-        <li class="expandable-block" onclick="toggleContent(event)">1. Need Statement View</li>
+        <li onclick="window.location.href='course team details.html';">1. Course Team Details</li>
+        <li class="expandable-block" onclick="toggleContent(event)">2. Need Statement View</li>
         <div class="expandable-content" style="display: none;">
             <p>In the blueprint of a smart city, efficient warehousing forms a cornerstone for a robust and responsive supply chain. As cities grow smarter and populations surge, the demand for goods and services will inevitably rise. This necessitates a warehouse management system that can adapt to the dynamic needs of the urban environment. The need for "an efficient system to build better warehouses and manage resources effectively" stems from the recognition that traditional warehouse operations are often plagued by inefficiencies in space utilization, inventory management, and order fulfillment. These shortcomings can lead to increased costs, delivery delays, and a negative impact on overall productivity. By embracing a smarter approach to warehousing, we can optimize operations, minimize waste, and ensure the seamless flow of goods throughout the city. This not only enhances the quality of life for citizens but also strengthens the economic vitality of the smart city.</p>
             <img src="assets/projectimage.jpg">
         </div>
-        <li onclick="window.location.href='course team details.html';">2. Course Team Details</li>
-        <li onclick="window.location.href='learning-reflections.html';">3. Learning Reflections</li>
-        <li onclick="window.location.href='space-time-efficiency.html';">4. Space and Time Efficiency</li>
-        <li onclick="window.location.href='sorting-searching.html';">5. Sort and Searching Algorithm</li>
-        <li onclick="window.location.href='business-cases.html';">6. Business Cases in Real World</li>
-        <li onclick="window.location.href='codeSnippet.html';">7. Solution of Business Case by DSA</li>
+        <li onclick="window.location.href='business-cases.html';">3. Business Cases in Real World</li>
+        <li onclick="window.location.href='sorting-searching.html';">4.Data Struct Algorithm</li>
+        <li onclick="window.location.href='codeSnippet.html';">5. Solution Program</li>
+        <li onclick="window.location.href='space-time-efficiency.html';">6. Space and Time Efficiency</li>
+        <li onclick="window.location.href='learning-reflections.html';">7. Learning Reflections</li>
         <li class="sdg-applied-trigger" onclick="toggleSDGContent();">8. SDG Applied</li>
     </ul>
 </section>
