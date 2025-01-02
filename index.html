@@ -6,60 +6,33 @@
     <title>Project Website</title>
     <style>
        header {
-    background-color: rgba(0, 120, 215, 0.9); /* Slightly darker blue */
-    color: white;
-    padding: 1em;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow to make it stand out */
-}
+            background-color: rgba(0, 120, 215, 0.9);
+            color: white;
+            padding: 1em;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space out title and nav */
+            align-items: center; /* Vertically align items */
+        }
 
-header nav {
-    display: flex;
-    justify-content: center; /* Centering the nav items */
-    align-items: center;
-}
+        .header-title { /* Style for the title */
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        header nav {
+            display: flex;
+            align-items: center;
+        }
 
-header nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 20px;
-    font-weight: bold;
-    font-size: 1.2em;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-header nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: #ffcc00; /* Gold underline */
-    transition: width 0.3s ease;
-}
-
-header nav a:hover {
-    color: #ffcc00; /* Change text color to gold */
-    transform: scale(1.1); /* Slightly scale up text on hover */
-}
-
-header nav a:hover::after {
-    width: 100%; /* Underline expands on hover */
-}
-
-       body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-image: url('https://img.freepik.com/free-vector/abstract-geometric-wireframe-background_52683-59421.jpg?t=st=1735263594~exp=1735267194~hmac=425fa815cdda8dd396866e567d3ab46ec77a8af21279c316dc2a78511a6afa31&w=1060');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: lighten;
-}
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
 
 .main-block {
     position: relative;
@@ -294,9 +267,10 @@ function toggleContent(event) {
 </head>
 <body>
 <header>
+    <span class="header-title">Project Portfolio</span>
     <nav>
         <a href="index.html">Home</a>
-    </nav>
+        </nav>
 </header>
 
 <section class="main-block">
@@ -359,7 +333,7 @@ function toggleContent(event) {
 </section>
 
 
-<section class="sliding-blocks" id="explore-more">
+<section class="sliding-blocks">
     <h2>Explore More</h2>
     <ul>
         <li onclick="window.location.href='course team details.html';">1. Course Team Details</li>
