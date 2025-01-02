@@ -21,31 +21,31 @@
             background-color: var(--misty-rose);
         }
 
-        .question-container {
+        .reflection-container {
             background-color: var(--pale-dogwood);
-            padding: 60px;
+            padding: 40px;
             border: 1px solid var(--light-coral);
             border-radius: 5px;
             margin-bottom: 20px;
-            text-align: center;
             color: #333;
         }
 
-        .answer-block {
+        .question-answer {
             background-color: var(--celadon);
-            padding: 30px;
+            padding: 20px;
+            margin-bottom: 15px;
             border: 1px solid var(--salmon-pink);
             border-radius: 5px;
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
         }
 
-        .answer-members {
-            margin-top: 20px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+        .question {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .answer {
+            margin-top: 10px;
+            color: #333;
         }
 
         .block {
@@ -68,21 +68,57 @@
 
     <h1>Learning Reflections</h1>
 
-    <div class="question-container">
-        <h2>Question Details</h2>
-    </div>
+    <div class="reflection-container">
+        <div class="question-answer">
+            <p class="question">Q1: What were the primary learning objectives of the DAA project in WMS?</p>
+            <p class="answer">A1: The primary learning objectives of the DAA project were to understand algorithm design, implement efficient algorithms in C++, and optimize warehouse management tasks like sorting, searching, and inventory allocation.</p>
+        </div>
 
-    <div class="answer-block">
-        <p>This is an answer block for detailed information or user responses.</p>
-    </div>
+        <div class="question-answer">
+            <p class="question">Q2: Which algorithmic concepts did you apply in the project?</p>
+            <p class="answer">A2: The project involved applying sorting algorithms (Merge Sort, Quick Sort), searching algorithms (binary search, hash maps), greedy algorithms, graph algorithms for path optimization, and dynamic programming for inventory management.</p>
+        </div>
 
-    <div class="answer-members">
-        <a class="block" href="https://example.com/answer1" target="_blank">Member 1</a>
-        <a class="block" href="https://example.com/answer2" target="_blank">Member 2</a>
-        <a class="block" href="https://example.com/answer3" target="_blank">Member 3</a>
-        <a class="block" href="https://example.com/answer4" target="_blank">Member 4</a>
+        <div class="question-answer">
+            <p class="question">Q3: How did working on this project improve your understanding of algorithm design and analysis?</p>
+            <p class="answer">A3: The project helped me improve problem-solving skills, time complexity analysis, and making trade-offs between efficiency and system constraints. It also taught me how to apply theoretical knowledge to real-world problems in WMS.</p>
+        </div>
+
+        <div class="question-answer">
+            <p class="question">Q4: What challenges did you encounter during the project, and how did you overcome them?</p>
+            <p class="answer">A4: Challenges included handling large data sets, real-time processing, and selecting the right algorithms. I overcame these by optimizing my algorithms, using multi-threading for real-time tasks, and testing various algorithms to ensure efficiency.</p>
+        </div>
+
+        <div class="question-answer">
+            <p class="question">Q5: What programming skills did you develop through this project?</p>
+            <p class="answer">A5: I developed skills in memory management, advanced data structures (hash maps, trees, graphs), object-oriented programming (OOP), and multi-threading in C++, enhancing both the efficiency and scalability of the system.</p>
+        </div>
+
+        <div class="question-answer">
+            <p class="question">Q6: How did the project help you understand the importance of algorithm efficiency in real-world applications?</p>
+            <p class="answer">A6: The project demonstrated how inefficient algorithms can slow down systems, hinder scalability, and increase operational costs. It emphasized the importance of algorithmic efficiency for handling large data sets and ensuring smooth real-time performance.</p>
+        </div>
+
+        <div class="question-answer">
+            <p class="question">Q7: How did the project influence your approach to future projects?</p>
+            <p class="answer">A7: The project taught me to prioritize algorithm efficiency from the design phase, continuously optimize solutions, and integrate theoretical knowledge with practical requirements to build scalable and performant systems.</p>
+        </div>
+    </div>
+<div>
+  <h1>Team Member's Response</h1>
+  <div>
+    <div class="block">
+        <a href="https://example.com/answer1" target="_blank">View Member 1's Response</a>
+    </div>
+    <div class="block">
+        <a href="https://example.com/answer2" target="_blank">View Member 2's Response</a>
+    </div>
+    <div class="block">
+        <a href="https://example.com/answer3" target="_blank">View Member 3's Response</a>
+    </div>
+    <div class="block">
+        <a href="https://example.com/answer4" target="_blank">View Member 4's Response</a>
     </div>
 
 </body>
 </html>
-  
