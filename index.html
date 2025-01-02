@@ -90,99 +90,281 @@ header nav a:hover::after {
     z-index: 1;
 }
 
-/* Removed hover effect for text */
-.main-block .text:hover {
-    /* No glow or scale effect applied */
+.course-detail-block {
+    text-align: center;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2em;
+    border-radius: 10px;
 }
 
-        .course-detail-block, .details-block, .team-vlog, .sliding-blocks, .quote-thank-you {
-            text-align: center;
+.course-detail-block h2 {
+    color: #00509e;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.course-detail-block .details-content {
+    display: none;
+    text-align: left;
+    margin-top: 1em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.course-detail-block .details-content p {
+    margin: 0.5em 0;
+}
+
+.course-detail-block h2.active + .details-content {
+    display: block;
+}
+
+.details-block, .team-vlog, .sliding-blocks, .quote-thank-you {
+    text-align: center;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2em;
+    border-radius: 10px;
+}
+
+.details-block h2, .team-vlog h2, .sliding-blocks h2, .quote-thank-you h2 {
+    color: #00509e;
+    font-size: 1.8em;
+}
+
+.sliding-blocks ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sliding-blocks li {
+    background-color: #0078d7;
+    color: white;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.sliding-blocks li:hover {
+    background-color: #00509e;
+}
+
+.quote-thank-you p {
+    font-size: 1.5em;
+    font-style: italic;
+    margin: 1em 0;
+    color: #555;
+}
+.sliding-blocks ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sliding-blocks li {
+    background-color: #0078d7;
+    color: white;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.sliding-blocks li:hover {
+    background-color: #00509e;
+}
+
+/* Add style for the expandable content */
+.expandable-block {
+    background-color: #0078d7;
+    color: white;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.expandable-block:hover {
+    background-color: #00509e;
+}
+
+.expandable-content {
+    padding: 1em;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-top: 1em;
+    display: none;
+    font-size: 1em;
+    color: #333;
+}
+.sdg-applied-section {
+            display: none;
+            background-color: #fff;
+            width: 80%;
+            margin: 0 auto;
             padding: 2em;
-            background-color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 2em;
             border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: max-height 0.5s ease-out;
+            overflow: hidden;
+            max-height: 0;
         }
-        .course-detail-block h2, .details-block h2, .team-vlog h2, .sliding-blocks h2, .quote-thank-you h2 {
+
+        .sdg-applied-section.open {
+            display: block;
+            max-height: 1000px;
+        }
+
+        .sdg-applied-section h3 {
             color: #00509e;
-            font-size: 1.8em;
+            font-size: 2em;
         }
-        .sliding-blocks ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .sliding-blocks li {
-            background-color: #0078d7;
-            color: white;
-            padding: 1.5em;
-            margin-bottom: 1em;
-            text-align: center;
-            cursor: pointer;
-            border-radius: 5px;
+
+        .sdg-applied-section p {
             font-size: 1.2em;
-            font-weight: bold;
-        }
-        .sliding-blocks li:hover {
-            background-color: #00509e;
-        }
-        .quote-thank-you p {
-            font-size: 1.5em;
-            font-style: italic;
-            margin: 1em 0;
             color: #555;
         }
+
+        /* Styling for the SDG Applied list item */
+        .sliding-blocks li.sdg-applied-trigger {
+            background-color: ;
+        }
+
+        .sliding-blocks li.sdg-applied-trigger:hover {
+            background-color: #218838;
+        }
     </style>
+    <script>
+        function toggleDetails(event) {
+            const heading = event.target;
+            heading.classList.toggle('active');
+        }
+function toggleSDGContent() {
+            const content = document.querySelector('.sdg-applied-section');
+            content.classList.toggle('open');
+        }
+function toggleContent(event) {
+    const content = event.target.nextElementSibling;
+    // Toggle display of the content
+    content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+}
+
+    </script>
 </head>
 <body>
 <header>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#team">Team Details</a>
-        <a href="#workspace">Work Space</a>
-        <a href="#about">About</a>
+        <a href="index.html">Home</a>
+        <a href="#explore-more">Team Details</a>
+        <a href="workspace.html">Work Space</a>
+        <a href="about.html">About</a>
     </nav>
 </header>
 
+<section class="main-block">
+    <img src="assets/golden ratio.png" alt="Algorithm">
+    <div class="text">Design and Analysis of Algorithm</div>
+</section>
 
-    <section class="main-block">
-        <img src="assets/golden ratio.png" alt="Algorithm">
-        <div class="text">Design and Analysis of Algorithm</div>
-    </section>
+<section class="course-detail-block">
+    <h2 onclick="toggleDetails(event)">Course Project Introduction</h2>
+    <div class="details-content">
+        <p><strong>Details of the Problem Space and How It Was Arrived At:</strong></p>
+        <p>The problem space for the Warehouse Management System (WMS) was identified by analyzing inefficiencies in inventory handling, order fulfillment, and resource allocation within warehouses. Modern warehouses face challenges such as inaccurate inventory tracking, delays in order processing, and suboptimal use of storage space. Insights were derived from industry white papers, which emphasized the importance of automation, data integration, and real-time monitoring to meet the increasing demand for faster and error-free logistics.</p>
+        <p><strong>Reflection on Warehouse Operations:</strong></p>
+        <p>Warehouses are critical nodes in supply chains, and any inefficiencies can lead to significant downstream impacts on customer satisfaction and operational costs. The research revealed the need for smarter systems to improve inventory accuracy, streamline picking processes, and enhance overall warehouse performance. The problem space was further refined to focus on leveraging algorithms and technology for automation and optimization.</p>
+        <p><strong>Business Case Identification:</strong></p>
+        <p>The business cases were identified by aligning key operational pain points with technological solutions. Examples include addressing mismanagement of inventory with real-time tracking systems and reducing order processing times through optimized picking algorithms. These cases ensure that the project delivers tangible improvements in warehouse efficiency.</p>
+        <p><strong>Problem Definition and Team Details:</strong></p>
+        <p>Problem Definition: The project aims to address inefficiencies in warehouse operations by developing a Warehouse Management System that optimizes inventory management, order processing, and resource utilization through automation and algorithm-driven solutions. The goal is to enhance accuracy, reduce costs, and improve service levels in warehouse operations.</p>
+    </div>
+</section>
 
-    <section class="course-detail-block">
-        <h2>Course Detail</h2>
-        <p>Discover the intricacies of algorithms, their design principles, and analytical approaches to solve complex problems.</p>
-    </section>
-
-    <section class="details-block">
-        <h2>Details About the Project</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-        <p>Additional details can be added here with more elaborate information about the project, including objectives, challenges, and outcomes.</p>
-    </section>
-
-    <section class="team-vlog">
-        <h2>Team Vlog</h2>
-        <p>This section highlights team members' contributions and vlog updates.</p>
-    </section>
-
-    <section class="sliding-blocks">
-        <h2>Explore More</h2>
+<section class="course-detail-block">
+    <h2 onclick="toggleDetails(event)">Details About the Project</h2>
+    <div class="details-content">
+        <p><strong>Objectives:</strong></p>
         <ul>
-            <li onclick="window.location.href='course-details.html';">1. Course Details</li>
-            <li onclick="window.location.href='course team details.html';">2. Course Team Details</li>
-            <li onclick="window.location.href='learning-reflections.html';">3. Learning Reflections</li>
-            <li onclick="window.location.href='space-time-efficiency.html';">4. Space and Time Efficiency</li>
-            <li onclick="window.location.href='sorting-searching.html';">5. Sort and Searching Algorithm</li>
-            <li onclick="window.location.href='business-cases.html';">6. Business Cases in Real World</li>
-            <li onclick="window.location.href='solutions-dsa.html';">7. Solution of Business Case by DSA</li>
-            <li onclick="window.location.href='sdg-applied.html';">8. SDG Applied</li>
+            <li>Efficiency: Develop a system that optimizes warehouse operations by automating inventory management, order picking, and storage processes.</li>
+            <li>Accuracy: Reduce errors in inventory tracking and order fulfillment by implementing real-time data monitoring and validation.</li>
+            <li>Cost Reduction: Minimize operational costs through better resource allocation and streamlined workflows.</li>
+            <li>Scalability: Design a system that can adapt to growing operational demands and integrate with other supply chain systems.</li>
         </ul>
-    </section>
+        <p><strong>Challenges:</strong></p>
+        <ul>
+            <li>Legacy Systems Integration: Many warehouses rely on outdated systems that may pose compatibility challenges with the proposed WMS.</li>
+            <li>Data Accuracy: Ensuring accurate data input and synchronization across various operational points (inventory, orders, and resources).</li>
+            <li>Scalability Constraints: Building a system that performs consistently even under peak loads or large-scale operations.</li>
+            <li>Resource Optimization: Balancing the allocation of resources such as labor, equipment, and storage space without disrupting operations.</li>
+        </ul>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Real-time Inventory Tracking: Employing IoT devices and RFID tags to monitor stock movement within the warehouse.</li>
+            <li>Optimized Picking Routes: Using algorithms to generate the most efficient paths for order picking.</li>
+            <li>Automated Replenishment: Monitoring stock levels and triggering replenishment alerts based on predefined thresholds.</li>
+            <li>Space Utilization Analytics: Analyzing storage patterns and recommending optimal layouts to maximize space use.</li>
+        </ul>
+        <p><strong>Outcomes:</strong></p>
+        <ul>
+            <li>Enhanced Productivity: The WMS is expected to improve picking and packing times by 30–50%.</li>
+            <li>Error Reduction: Achieve near-zero discrepancies in inventory levels and order processing.</li>
+            <li>Cost Savings: Cut operational costs by up to 20% through efficient resource utilization.</li>
+            <li>Improved Customer Satisfaction: Ensure faster delivery times and accurate order fulfillment.</li>
+        </ul>
+        <p><strong>Future Scope:</strong></p>
+        <ul>
+            <li>AI and Machine Learning: Incorporate predictive analytics for demand forecasting and inventory planning.</li>
+            <li>Robotics Integration: Enable automation of repetitive tasks like sorting, stacking, or packing using robotic systems.</li>
+            <li>Cross-System Connectivity: Establish seamless integration with upstream and downstream supply chain systems (e.g., ERP, CRM).</li>
+        </ul>
+    </div>
+</section>
 
-    <section class="quote-thank-you">
-        <h2>Quote</h2>
-        <p>"The journey of a thousand miles begins with one step." - Lao Tzu</p>
-        <h2>Thank You</h2>
-        <p>Thank you for exploring our project!</p>
+
+<section class="team-vlog">
+    <h2>Team Vlog</h2>
+    <p>This section highlights team members' contributions and vlog updates.</p>
+</section>
+
+<section class="sliding-blocks" id="explore-more">
+    <h2>Explore More</h2>
+    <ul>
+        <li class="expandable-block" onclick="toggleContent(event)">1. Need Statement View</li>
+        <div class="expandable-content" style="display: none;">
+            <p>In the blueprint of a smart city, efficient warehousing forms a cornerstone for a robust and responsive supply chain. As cities grow smarter and populations surge, the demand for goods and services will inevitably rise. This necessitates a warehouse management system that can adapt to the dynamic needs of the urban environment. The need for "an efficient system to build better warehouses and manage resources effectively" stems from the recognition that traditional warehouse operations are often plagued by inefficiencies in space utilization, inventory management, and order fulfillment. These shortcomings can lead to increased costs, delivery delays, and a negative impact on overall productivity. By embracing a smarter approach to warehousing, we can optimize operations, minimize waste, and ensure the seamless flow of goods throughout the city. This not only enhances the quality of life for citizens but also strengthens the economic vitality of the smart city.</p>
+        </div>
+        <li onclick="window.location.href='course team details.html';">2. Course Team Details</li>
+        <li onclick="window.location.href='learning-reflections.html';">3. Learning Reflections</li>
+        <li onclick="window.location.href='space-time-efficiency.html';">4. Space and Time Efficiency</li>
+        <li onclick="window.location.href='sorting-searching.html';">5. Sort and Searching Algorithm</li>
+        <li onclick="window.location.href='business-cases.html';">6. Business Cases in Real World</li>
+        <li onclick="window.location.href='solutions-dsa.html';">7. Solution of Business Case by DSA</li>
+        <li class="sdg-applied-trigger" onclick="toggleSDGContent();">8. SDG Applied</li>
+    </ul>
+</section>
+<section class="sdg-applied-section">
+        <h3>SDG Applied - Sustainable Development Goals</h3>
+        <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkeJt2SYvJzcW84yWbVWdBksaTfggmhmVbWg&s"><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sustainable_Development_Goal_11SustainableCities.svg/330px-Sustainable_Development_Goal_11SustainableCities.svg.png"></p>
     </section>
+<section class="quote-thank-you">
+    <h2>Quote</h2>
+    <p>"The journey of a thousand miles begins with one step." - Lao Tzu</p>
+    <h2>Thank You</h2>
+    <p>Thank you for exploring our project!</p>
+</section>
 </body>
 </html>
