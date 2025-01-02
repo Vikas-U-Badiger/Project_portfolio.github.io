@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Management System - Business Case & Functionality</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            background-color: #fafafa;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover td {
+            background-color: #e8e8e8;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            color: #00509e;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Business Case Identification</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Sl.No.</th>
+            <th>Business Case Identified</th>
+            <th>Description</th>
+            <th>Owner</th>
+            <th>Probable Tools</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Rising Demand</td>
+            <td>Rising demand in the smart cities requires predicting the stock efficiently so that users are satisfied.</td>
+            <td>Inventory Manager</td>
+            <td>Hash Maps, Priority Queues (Heaps), Binary Search Trees (BST), Dynamic Programming (DP)</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Space Constraints</td>
+            <td>Limited space in urban areas requires a space-efficient warehouse that can adjust items according to available space.</td>
+            <td>Operations Manager</td>
+            <td>Greedy Algorithms, 2D Arrays or Matrices, Segment Trees</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Inefficient Routes</td>
+            <td>The routes between warehouses should be the shortest to save fuel and reduce costs.</td>
+            <td>Logistics Manager</td>
+            <td>Graph Algorithms, Dynamic Programming, Adjacency Lists/Matrix</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Improper Identification of Vehicles and Parcel Boxes</td>
+            <td>Trucks and vehicles should be verified with number plates and driver IDs to enter the warehouse.</td>
+            <td>Security Supervisor</td>
+            <td>Trie (Prefix Tree), Hash Tables, Queue</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Improper Identification of Workers</td>
+            <td>Workers should be assigned a worker ID for daily verification by the WMS.</td>
+            <td>HR Manager</td>
+            <td>Hash Tables, Linked Lists, Bit Manipulation</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Maintaining Budget of the Warehouse</td>
+            <td>Ensuring salaries are paid on time and warehouse costing is accurate.</td>
+            <td>Finance Manager</td>
+            <td>Dynamic Arrays (Vectors), Fenwick Tree (Binary Indexed Tree), Priority Queues</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Functionality Identified</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Sl.No.</th>
+            <th>Functionality Identified</th>
+            <th>Description</th>
+            <th>Owner</th>
+            <th>Probable Tools</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Listing all the items in the warehouse</td>
+            <td>List the items in the warehouse according to their priority.</td>
+            <td>Inventory Manager</td>
+            <td>Priority Queue</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Searching the required item in the warehouse</td>
+            <td>Search for the required item in the warehouse by entering the keywords of the item.</td>
+            <td>Inventory Manager</td>
+            <td>Hashing/Hash Tables, Sorting Algorithms</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Minimizing the costs of traveling</td>
+            <td>Minimize the cost of traveling from one warehouse to another.</td>
+            <td>Logistics Manager</td>
+            <td>Graph Algorithms, Dynamic Programming</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Vehicle Data Management</td>
+            <td>Manage the data of vehicles by verifying the entry and exit of vehicles.</td>
+            <td>Security Supervisor</td>
+            <td>Trie (Prefix Tree)</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Worker Data Management</td>
+            <td>Sort the worker data according to their positions.</td>
+            <td>HR Manager</td>
+            <td>Hashing/Hash Tables, Sorting Algorithms</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Budget Management</td>
+            <td>Manage the budget and expenditure of the warehouse to avoid losses.</td>
+            <td>Finance Manager</td>
+            <td>Fenwick Tree, Priority Queues</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
