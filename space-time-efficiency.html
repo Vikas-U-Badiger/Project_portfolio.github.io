@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time and Space Complexity Analysis</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+            background: linear-gradient(to bottom, #e6f2ff, #ffffff);
+        }
 
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            color: #1a535c;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 0.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 1.2em;
+            margin-bottom: 0.6em;
+            border-bottom: 2px solid #4ecdc4;
+            padding-bottom: 0.3em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+            color: #45b39d;
+        }
+
+        h4 {
+            font-size: 1.3em;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+            color: #66bfbf;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #d0f0c0;
+            padding: 12px 15px;
+            text-align: left;
+            transition: background-color 0.3s ease;
+        }
+
+        th {
+            background-color: #a8e6cf;
+            font-weight: 600;
+            color: #1a535c;
+        }
+
+        tr:hover td {
+            background-color: #eaf9e2;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 1.2em;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            text-align: justify;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            background-color: #f0f0f0;
+            padding: 3px 6px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Time and Space Complexity Analysis</h1>
+
+    <table>
+        <tr>
+            <th>Functions</th>
+            <th>Individual Time Complexity</th>
+            <th>Individual Space Complexity</th>
+        </tr>
+        <tr>
+            <td><code>addItem()</code></td>
+            <td>O(nlogn)</td>
+            <td>O(n)</td>
+        </tr>
+        <tr>
+            <td><code>searchItem()</code></td>
+            <td>O(m)</td>
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td><code>updateItem()</code></td>
+            <td>O(n)</td>
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td><code>deleteItem()</code></td>
+            <td>O(n)</td>
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td><code>allocateNumberPlate()</code></td>
+            <td>O(1)</td>
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td><code>Dijkstra()</code></td>
+            <td>O((V+E)logV)</td>
+            <td>O(V)</td>
+        </tr>
+    </table>
+
+    <h3>Time Complexity:</h3>
+    <ul>
+        <li>For functions with O(nlogn) (e.g., <code>addItem()</code>), this dominates other linear terms like O(n) in <code>updateItem()</code> and <code>deleteItem()</code> for larger values of n.</li>
+        <li>O((V+E)logV) in <code>Dijkstra()</code> is significant for graph-related operations, and it could dominate depending on the graph size V and E.</li>
+    </ul>
+
+    <p>The overall complexity can be expressed as:</p>
+    <p>T.C = O(max(nlogn, n+m, n, 1, (V+E)logV))</p>
+    <ul>
+        <li>For large n, O(nlogn) dominates O(n).</li>
+        <li>For graph-related operations, O((V+E)logV) might dominate O(nlogn), depending on the size of V and E.</li>
+    </ul>
+
+    <h4>Resulting Overall Time Complexity:</h4>
+    <ul>
+        <li>If the graph-related operation (<code>Dijkstra()</code>) is used frequently and V and E are larger than n, the overall complexity will be: O((V+E)logV)</li>
+        <li>Otherwise, for inventory operations with no significant graph tasks: O(nlogn)</li>
+    </ul>
+
+    <h3>Space Complexity:</h3>
+    <p>Combining Space Complexities:</p>
+    <p>The space complexity is determined by the function with the highest space requirement:</p>
+    <p>O(max(n, m, V))</p>
+    <ul>
+        <li>If V > max(n, m), the space complexity is O(V).</li>
+        <li>Otherwise, it is O(n) (e.g., for inventory operations).</li>
+    </ul>
+
+    <h4>Therefore,</h4>
+    <p>Overall Time Complexity: O(max(nlogn, (V+E)logV))</p>
+    <p>Overall Space Complexity: O(max(n, V, m))</p>
+
+</body>
+</html>
